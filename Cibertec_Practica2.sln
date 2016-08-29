@@ -3,7 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chinook.Model", "Chinook.Model\Chinook.Model.csproj", "{42CDF6BF-31E6-48BA-914A-DCC0E87BDF80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chinook.Repository", "Chinook.Repository\Chinook.Repository.csproj", "{26B59CB0-4FB0-4D9D-AA0F-1730CAD8D1CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chinook", "Chinook\Chinook.csproj", "{D097E8F3-51AC-4180-B3BA-1DF4ADEA0E5E}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42CDF6BF-31E6-48BA-914A-DCC0E87BDF80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42CDF6BF-31E6-48BA-914A-DCC0E87BDF80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42CDF6BF-31E6-48BA-914A-DCC0E87BDF80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42CDF6BF-31E6-48BA-914A-DCC0E87BDF80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26B59CB0-4FB0-4D9D-AA0F-1730CAD8D1CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26B59CB0-4FB0-4D9D-AA0F-1730CAD8D1CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26B59CB0-4FB0-4D9D-AA0F-1730CAD8D1CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26B59CB0-4FB0-4D9D-AA0F-1730CAD8D1CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D097E8F3-51AC-4180-B3BA-1DF4ADEA0E5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D097E8F3-51AC-4180-B3BA-1DF4ADEA0E5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D097E8F3-51AC-4180-B3BA-1DF4ADEA0E5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D097E8F3-51AC-4180-B3BA-1DF4ADEA0E5E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
