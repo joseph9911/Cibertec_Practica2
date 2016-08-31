@@ -16,21 +16,21 @@ namespace Chinook.Model
 
         public int CustomerId { get; set; }
 
-        [Required]
-        [StringLength(40)]
+        [Required(ErrorMessage ="Este campo es requerido")]
+        [StringLength(40, ErrorMessage = "Este campo requiere como maximo 40 caracteres. ")]
         public string FirstName { get; set; }
 
-        [Required]
-        [StringLength(20)]
+        [Required(ErrorMessage ="Este campo es requerido")]
+        [StringLength(40, ErrorMessage = "Este campo requiere como maximo 40 caracteres. ")]
         public string LastName { get; set; }
 
-        [StringLength(80)]
+        [StringLength(80, ErrorMessage = "Este campo requiere como maximo 80 caracteres. ")]
         public string Company { get; set; }
 
-        [StringLength(70)]
+        [StringLength(70, ErrorMessage = "Este campo requiere como maximo 70 caracteres. ")]
         public string Address { get; set; }
 
-        [StringLength(40)]
+        [StringLength(40, ErrorMessage = "Este campo requiere como maximo 40 caracteres. ")]
         public string City { get; set; }
 
         [StringLength(40)]
@@ -48,8 +48,9 @@ namespace Chinook.Model
         [StringLength(24)]
         public string Fax { get; set; }
 
-        [Required]
-        [StringLength(60)]
+        [Required(ErrorMessage ="Este campo es requerido")]
+        [StringLength(60, ErrorMessage = "Este campo requiere como maximo 60 caracteres. ")]
+
         public string Email { get; set; }
 
         public int? SupportRepId { get; set; }

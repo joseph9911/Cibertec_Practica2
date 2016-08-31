@@ -18,9 +18,10 @@ namespace Chinook.Model
 
         public int AlbumId { get; set; }
 
-        [Required]
-        [StringLength(160)]
+        [Required(ErrorMessage ="Este campo es requerido. ")]
+        [StringLength(160, ErrorMessage ="Este campo requiere como maximo 160 caracteres. ")]
         public string Title { get; set; }
+
 
         public int ArtistId { get; set; }
 

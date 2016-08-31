@@ -16,6 +16,7 @@ namespace Chinook.Model
 
         public int GenreId { get; set; }
 
+        [Required(ErrorMessage = "Este campo es requerido")]
         [StringLength(120)]
         public string Name { get; set; }
 

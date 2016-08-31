@@ -17,7 +17,9 @@ namespace Chinook.Model
 
         public int ArtistId { get; set; }
 
-        [StringLength(120)]
+
+        [Required(ErrorMessage = "Este campo es requerido")]
+        [StringLength(120, ErrorMessage = "Este campo requiere como maximo 120 caracteres. ")]
         public string Name { get; set; }
                 
         public virtual ICollection<Album> Album { get; set; }

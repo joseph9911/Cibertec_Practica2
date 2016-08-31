@@ -17,11 +17,11 @@ namespace Chinook.Model
 
         public int EmployeeId { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="Este campo es requerido")]
         [StringLength(20)]
         public string LastName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="Este campo es requerido")]
         [StringLength(20)]
         public string FirstName { get; set; }
 

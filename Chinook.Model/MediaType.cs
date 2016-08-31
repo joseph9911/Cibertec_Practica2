@@ -16,6 +16,7 @@ namespace Chinook.Model
 
         public int MediaTypeId { get; set; }
 
+        [Required(ErrorMessage = "Este campo es requerido")]
         [StringLength(120)]
         public string Name { get; set; }
 

@@ -17,7 +17,7 @@ namespace Chinook.Model
 
         public int TrackId { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Este campo es requerido")]
         [StringLength(200)]
         public string Name { get; set; }
 

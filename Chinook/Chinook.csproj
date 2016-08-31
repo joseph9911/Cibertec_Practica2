@@ -44,6 +44,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -120,7 +124,20 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AlbumController.cs" />
+    <Compile Include="Controllers\ArtistController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
+    <Compile Include="Controllers\GenreController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InvoiceController.cs" />
+    <Compile Include="Controllers\InvoiceLineController.cs" />
+    <Compile Include="Controllers\MediaTypeController.cs" />
+    <Compile Include="Controllers\PlaylistController.cs" />
+    <Compile Include="Controllers\TrackController.cs" />
+    <Compile Include="Filters\AuditControl.cs" />
+    <Compile Include="Filters\ExceptionControl.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -161,10 +178,62 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Artist\Index.cshtml" />
+    <Content Include="Views\Artist\Create.cshtml" />
+    <Content Include="Views\Artist\Edit.cshtml" />
+    <Content Include="Views\Artist\Delete.cshtml" />
+    <Content Include="Views\Artist\Details.cshtml" />
+    <Content Include="Views\Album\Index.cshtml" />
+    <Content Include="Views\Album\Create.cshtml" />
+    <Content Include="Views\Album\Edit.cshtml" />
+    <Content Include="Views\Album\Delete.cshtml" />
+    <Content Include="Views\Album\Details.cshtml" />
+    <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Customer\Create.cshtml" />
+    <Content Include="Views\Customer\Edit.cshtml" />
+    <Content Include="Views\Customer\Delete.cshtml" />
+    <Content Include="Views\Customer\Details.cshtml" />
+    <Content Include="Views\Employee\Index.cshtml" />
+    <Content Include="Views\Employee\Create.cshtml" />
+    <Content Include="Views\Employee\Edit.cshtml" />
+    <Content Include="Views\Employee\Delete.cshtml" />
+    <Content Include="Views\Employee\Details.cshtml" />
+    <Content Include="Views\Genre\Index.cshtml" />
+    <Content Include="Views\Genre\Create.cshtml" />
+    <Content Include="Views\Genre\Edit.cshtml" />
+    <Content Include="Views\Genre\Delete.cshtml" />
+    <Content Include="Views\Genre\Details.cshtml" />
+    <Content Include="Views\Invoice\Index.cshtml" />
+    <Content Include="Views\Invoice\Create.cshtml" />
+    <Content Include="Views\Invoice\Edit.cshtml" />
+    <Content Include="Views\Invoice\Delete.cshtml" />
+    <Content Include="Views\Invoice\Details.cshtml" />
+    <Content Include="Views\InvoiceLine\Index.cshtml" />
+    <Content Include="Views\InvoiceLine\Create.cshtml" />
+    <Content Include="Views\InvoiceLine\Edit.cshtml" />
+    <Content Include="Views\InvoiceLine\Delete.cshtml" />
+    <Content Include="Views\InvoiceLine\Details.cshtml" />
+    <Content Include="Views\MediaType\Index.cshtml" />
+    <Content Include="Views\MediaType\Create.cshtml" />
+    <Content Include="Views\MediaType\Edit.cshtml" />
+    <Content Include="Views\MediaType\Delete.cshtml" />
+    <Content Include="Views\MediaType\Details.cshtml" />
+    <Content Include="Views\PlayList\Index.cshtml" />
+    <Content Include="Views\PlayList\Create.cshtml" />
+    <Content Include="Views\PlayList\Edit.cshtml" />
+    <Content Include="Views\PlayList\Delete.cshtml" />
+    <Content Include="Views\PlayList\Details.cshtml" />
+    <Content Include="Views\Track\Index.cshtml" />
+    <Content Include="Views\Track\Create.cshtml" />
+    <Content Include="Views\Track\Edit.cshtml" />
+    <Content Include="Views\Track\Delete.cshtml" />
+    <Content Include="Views\Track\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Helpers\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -173,6 +242,16 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Chinook.Model\Chinook.Model.csproj">
+      <Project>{42cdf6bf-31e6-48ba-914a-dcc0e87bdf80}</Project>
+      <Name>Chinook.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chinook.Repository\Chinook.Repository.csproj">
+      <Project>{26B59CB0-4FB0-4D9D-AA0F-1730CAD8D1CE}</Project>
+      <Name>Chinook.Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
